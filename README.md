@@ -76,6 +76,7 @@ Two main merges are performed:
 
 Merge 1: Product + Segment
 python
+
 df_full = df_prod.merge(
     df_seg,
     how="left",
@@ -84,63 +85,54 @@ df_full = df_prod.merge(
 )
 Merge 2: Adding Sales
 python
+
 df_full = df_full.merge(
     df_sales,
     left_on="ITEM",
     right_on="ITEM_CODE",
     how="left"
 )
+
 Resulting dataset includes:
+- Product attributes
+- Segment classification
+- Weekly sales metrics
+- Region information
 
-Product attributes
-
-Segment classification
-
-Weekly sales metrics
-
-Region information
-
-Example merged output (from your notebook):
+Example merged output:
 
 Code
 MANUFACTURER   BRAND     ITEM        CATEGORY   FORMAT   SEGMENT   WEEK   TOTAL_UNIT_SALES   REGION
 INDS. ALEN     CLORALEX  0000075000592 1        LIQUIDO  BLEACH    45-22  0.034              TOTAL AUTOS SCANNING MEXICO
-📈 Exploratory Analysis
+
+## Exploratory Analysis
 The notebook includes initial checks such as:
-
-Weekly sales distribution
-
-Product-level sales behavior
-
-Segment-level comparisons
-
+- Weekly sales distribution
+- Product-level sales behavior
+- Segment-level comparisons
 This prepares the dataset for future modeling (clustering, PCA, forecasting, etc.).
 
-⚙️ Environment Setup
+## Environment Setup
 Required Libraries
 Code
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
+    - pandas
+    - numpy
+    - matplotlib
+    - seaborn
+    - scikit-learn
+    
 Install Dependencies
 bash
 pip install pandas numpy matplotlib seaborn scikit-learn
-▶️ How to Run the Notebook
-Open JupyterLab or Jupyter Notebook.
 
-Place all data files in the same directory as the notebook.
+## How to Run the Notebook
+- Open JupyterLab or Jupyter Notebook.
+- Place all data files in the same directory as the notebook.
+- Run the notebook sequentially from top to bottom.
+- Ensure all datasets load correctly before executing merge operations.
 
-Run the notebook sequentially from top to bottom.
-
-Ensure all datasets load correctly before executing merge operations.
-
-📌 Next Steps (Deliverable 04 and beyond)
-Perform deeper exploratory analysis
-
-Build segmentation models (KMeans, PCA)
-
-Create dashboards in Power BI
-
-Generate business insights for the partner company
+## Next Steps (Deliverable 04 and beyond)
+- Perform deeper exploratory analysis
+- Build segmentation models (KMeans, PCA)
+- Create dashboards in Power BI
+- Generate business insights for the partner company
