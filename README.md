@@ -1,22 +1,19 @@
 # PartnerCompanyProject_03_KMeans
 The project objective is to integrate multiple datasets (product, segment, category, and sales), perform data cleaning, and prepare a unified analytical dataset for subsequent modeling and business insights.
 
-📌 Project Overview
+## Project Overview
 This project is part of the EBAC Data Science & Business Analytics Program and corresponds to Deliverable 03 of the Proyecto Empresa Aliada.
 The objective is to integrate multiple datasets (product, segment, category, and sales), perform data cleaning, and prepare a unified analytical dataset for subsequent modeling and business insights.
 
 The notebook includes:
+- Loading and inspecting dimension and fact tables
+- Cleaning and transforming product and sales data
+- Merging datasets into a single analytical table
+- Exploratory checks of weekly sales behavior
 
-Loading and inspecting dimension and fact tables
+## Project Structure
+Code:
 
-Cleaning and transforming product and sales data
-
-Merging datasets into a single analytical table
-
-Exploratory checks of weekly sales behavior
-
-📁 Project Structure
-Code
 Proyecto_empresa_aliadaEntregable03/
 │
 ├── DIM_PRODUCT.xlsx
@@ -26,72 +23,53 @@ Proyecto_empresa_aliadaEntregable03/
 │
 ├── Proyecto_empresa_aliadaEntregable03.ipynb   ← Main notebook
 └── README.md
-📊 Data Sources
+
+## Data Sources
 1. DIM_PRODUCT.xlsx
 Contains product-level attributes:
-
-Manufacturer
-
-Brand
-
-Item code
-
-Description
-
-Category
-
-Format
-
-Attributes (ATTR1, ATTR2, ATTR3)
+- Manufacturer
+- Brand
+- Item code
+- Description
+- Category
+- Format
+- Attributes (ATTR1, ATTR2, ATTR3)
 
 2. DIM_SEGMENT.xlsx
 Provides segment classification based on product attributes:
-
-Category
-
-Format
-
-ATTR1, ATTR2, ATTR3
-
-Segment
+- Category
+- Format
+- ATTR1, ATTR2, ATTR3
+- Segment
 
 3. DIM_CATEGORY.csv
 Category-level metadata.
 
 4. FACT_SALES.csv
 Weekly sales information:
+- WEEK
+- ITEM_CODE
+- TOTAL_UNIT_SALES
+- TOTAL_VALUE_SALES
+- TOTAL_UNIT_AVG_WEEKLY_SALES
+- REGION
 
-WEEK
-
-ITEM_CODE
-
-TOTAL_UNIT_SALES
-
-TOTAL_VALUE_SALES
-
-TOTAL_UNIT_AVG_WEEKLY_SALES
-
-REGION
-
-Example (from your notebook):
+Example:
 
 Code
 WEEK   ITEM_CODE        TOTAL_UNIT_SALES   TOTAL_VALUE_SALES   REGION
 34-22  7501058792808BP2 0.006              0.139               TOTAL AUTOS AREA 5
-🛠️ Methods & Workflow
+
+## Methods & Workflow
 1. Data Loading
 The notebook loads all dimension and fact tables using pandas.read_excel() and pandas.read_csv().
 
 2. Data Cleaning & Preparation
 Key steps include:
-
-Inspecting product and sales tables
-
-Handling missing values
-
-Standardizing formats
-
-Preparing keys for merging
+- Inspecting product and sales tables
+- Handling missing values
+- Standardizing formats
+- Preparing keys for merging
 
 3. Dataset Merging
 Two main merges are performed:
